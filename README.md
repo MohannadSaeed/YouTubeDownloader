@@ -249,6 +249,44 @@ Users are responsible for complying with YouTube’s Terms of Service and copyri
 
 ---
 
+## Installation
+
+Download the latest installer from the releases page:
+
+[Download Latest Release](https://github.com/MohannadSaeed/YouTubeDownloader/releases/latest)
+
+### Steps
+
+1. Download `YouTubeDownloaderSetup.exe`
+2. Run the installer as Administrator
+3. Follow the installation wizard
+4. Launch the application from:
+   - Desktop shortcut
+   - Start Menu
+
+### Included Dependencies
+
+The installer already includes:
+
+- FFmpeg
+- FFprobe
+- SQLite runtime
+- .NET Desktop Runtime (if published self-contained)
+
+### Notes
+
+- Windows Defender may show a warning for unsigned applications
+- Click:
+  - `More info`
+  - `Run anyway`
+
+### Requirements
+
+- Windows 10/11
+- Internet connection
+---
+
+
 ## 👨‍💻 Author
 
 Developed by **Cyber Geeks**
