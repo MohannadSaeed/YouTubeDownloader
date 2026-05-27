@@ -232,12 +232,12 @@ dotnet run
 ## 📸 Screenshots
 
 ### Main Queue
-![Main Queue](./screenshots/main-queue.png)
+![Main Queue](screenshots/MainQueue.png)
 ### Download History
-![History](./screenshots/history.png)
+![History](screenshots/DownloadHistory.png)
 
 ### Settings Panel
-![Settings](./screenshots/settings.png)
+![Settings](screenshots/Settings.png)
 
 ---
 
