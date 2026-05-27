@@ -1,4 +1,5 @@
-﻿using YouTubeDownloader.Helpers;
+﻿using FontAwesome.Sharp;
+using YouTubeDownloader.Helpers;
 using YouTubeDownloader.Models;
 
 namespace YouTubeDownloader.Forms
@@ -148,18 +149,9 @@ namespace YouTubeDownloader.Forms
             };
             urlSection.Controls.Add(txtDownloadFolder);
 
-            btnBrowseFolder = new Button
-            {
-                Text = "Browse",
-                Width = 150,
-                Height = 40,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                ForeColor = Color.White,
-                BackColor = Color.FromArgb(0, 120, 255),
-                FlatStyle = FlatStyle.Flat,
-                Location = new Point(1020, 136)
-            };
+            btnBrowseFolder = CreateIconButton("Browse",  IconChar.FolderOpen, 150, 40);
             btnBrowseFolder.FlatAppearance.BorderSize = 0;
+            btnBrowseFolder.Location = new Point(1020, 136);
             btnBrowseFolder.Click += BtnBrowseFolder_Click;
             urlSection.Controls.Add(btnBrowseFolder);
             txtDownloadFolder.Text = Path.GetDirectoryName(appSettings.VideoFolder) ?? "";
@@ -197,18 +189,9 @@ namespace YouTubeDownloader.Forms
         /// </summary>
         private void BuildAddQueueButton()
         {
-            btnAddQueue = new Button
-            {
-                Text = "Add To Queue",
-                Width = 260,
-                Height = 60,
-                Font = new Font("Segoe UI", 12, FontStyle.Bold),
-                ForeColor = Color.White,
-                BackColor = Color.FromArgb(0, 120, 255),
-                FlatStyle = FlatStyle.Flat,
-                Location = new Point(1280, 82)
-            };
+            btnAddQueue = CreateIconButton("Add To Queue", IconChar.PlusCircle, 260, 60);
             btnAddQueue.FlatAppearance.BorderSize = 0;
+            btnAddQueue.Location = new Point(1280, 120);
             btnAddQueue.Click += BtnAddQueue_Click;
             urlSection.Controls.Add(btnAddQueue);
         }

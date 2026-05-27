@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using YouTubeDownloader.Helpers;
@@ -59,7 +60,8 @@ namespace YouTubeDownloader.Forms
             txtVideoFolder = CreateSettingsTextBox(left, top);
             settingsPanel.Controls.Add(txtVideoFolder);
 
-            Button btnBrowseVideo = CreateBrowseButton(left + 850, top);
+            IconButton btnBrowseVideo = CreateIconButton("Browse", IconChar.FolderOpen, 150, 40);
+            btnBrowseVideo.Location = new Point(left + 850, top);
             btnBrowseVideo.Click += BtnBrowseVideo_Click;
             settingsPanel.Controls.Add(btnBrowseVideo);
 
@@ -69,7 +71,8 @@ namespace YouTubeDownloader.Forms
             txtAudioFolder = CreateSettingsTextBox(left, top);
             settingsPanel.Controls.Add(txtAudioFolder);
 
-            Button btnBrowseAudio = CreateBrowseButton(left + 850, top);
+            IconButton btnBrowseAudio = CreateIconButton("Browse", IconChar.FolderOpen, 150, 40);
+            btnBrowseAudio.Location = new Point(left + 850, top);
             btnBrowseAudio.Click += BtnBrowseAudio_Click;
             settingsPanel.Controls.Add(btnBrowseAudio);
 
@@ -117,17 +120,8 @@ namespace YouTubeDownloader.Forms
             top += 90;
 
             // Save Settings button
-            btnSaveSettings = new Button
-            {
-                Text = "Save Settings",
-                Width = 220,
-                Height = 55,
-                Font = new Font("Segoe UI", 11, FontStyle.Bold),
-                BackColor = Color.FromArgb(0, 120, 255),
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Location = new Point(left, top)
-            };
+            btnSaveSettings = CreateIconButton("Save Settings", IconChar.FloppyDisk, 220, 55);
+            btnSaveSettings.Location = new Point(left, top - 20);
             btnSaveSettings.FlatAppearance.BorderSize = 0;
             btnSaveSettings.Click += BtnSaveSettings_Click;
             settingsPanel.Controls.Add(btnSaveSettings);

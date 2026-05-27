@@ -1,4 +1,5 @@
-﻿using YouTubeDownloader.Controls;
+﻿using FontAwesome.Sharp;
+using YouTubeDownloader.Controls;
 using YouTubeDownloader.Helpers;
 using YouTubeDownloader.Models;
 
@@ -56,18 +57,9 @@ namespace YouTubeDownloader.Forms
             };
             queuePanel.Controls.Add(lblQueueCount);
 
-            btnStartDownloads = new Button
-            {
-                Text = "Start Downloads",
-                Width = 180,
-                Height = 40,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
-                BackColor = Color.FromArgb(0, 120, 255),
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Location = new Point(1120, 15)
-            };
+            btnStartDownloads = CreateIconButton("Start Downloads", IconChar.Download, 220, 45);
             btnStartDownloads.FlatAppearance.BorderSize = 0;
+            btnStartDownloads.Location = new Point(1350, 10);
             btnStartDownloads.Click += BtnStartDownloads_Click;
             queuePanel.Controls.Add(btnStartDownloads);
         }

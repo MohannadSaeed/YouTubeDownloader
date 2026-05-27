@@ -1,9 +1,10 @@
-﻿using System.ComponentModel;
+﻿using FontAwesome.Sharp;
+using System.ComponentModel;
 using YouTubeDownloader.Data;
+using YouTubeDownloader.Forms;
 using YouTubeDownloader.Helpers;
 using YouTubeDownloader.Models;
 using YouTubeDownloader.Services;
-using YouTubeDownloader.Forms;
 
 namespace YouTubeDownloader.Forms
 {
@@ -30,11 +31,11 @@ namespace YouTubeDownloader.Forms
         private TextBox txtUrl = null!;
         private ComboBox cmbFormat = null!;
         private ComboBox cmbQuality = null!;
-        private Button btnAddQueue = null!;
-        private Button btnStartDownloads = null!;
+        private IconButton btnAddQueue = null!;
+        private IconButton btnStartDownloads = null!;
         private PictureBox picThumbnail = null!;
         private TextBox txtDownloadFolder = null!;
-        private Button btnBrowseFolder = null!;
+        private IconButton btnBrowseFolder = null!;
 
         // Labels for video preview
         private Label lblVideoTitle = null!;
@@ -81,8 +82,8 @@ namespace YouTubeDownloader.Forms
         private DataGridView dgvHistory = null!;
         private TextBox txtHistorySearch = null!;
         private ComboBox cmbHistoryFilter = null!;
-        private Button btnHome = null!;
-        private Button btnDownloads = null!;
+        private IconButton btnHome = null!;
+        private IconButton btnDownloads = null!;
 
 
         // Settings service instance
@@ -97,7 +98,7 @@ namespace YouTubeDownloader.Forms
         private CheckBox chkShowNotifications = null!;
         private CheckBox chkAutoPasteClipboard = null!;
         private CheckBox chkMinimizeTray = null!;
-        private Button btnSaveSettings = null!;
+        private IconButton btnSaveSettings = null!;
         private Button btnSettings = null!;
 
         // Auto Paste Clipboard Timer

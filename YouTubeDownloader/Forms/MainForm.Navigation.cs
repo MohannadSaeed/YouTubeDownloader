@@ -1,4 +1,6 @@
-﻿namespace YouTubeDownloader.Forms
+﻿using FontAwesome.Sharp;
+
+namespace YouTubeDownloader.Forms
 {
     public partial class MainForm
     {
@@ -30,7 +32,7 @@
                 btnSettings.Left = x + (buttonWidth * 2) + (spacing * 2);
             };
 
-            btnHome = CreateNavButton("Queue");
+            btnHome = CreateNavButton("Queue", IconChar.List);
             btnHome.Width = buttonWidth;
             btnHome.Height = 40;
             btnHome.Location = new Point(450, 15);
@@ -45,14 +47,14 @@
             };
             navigationBar.Controls.Add(btnHome);
 
-            btnDownloads = CreateNavButton("Downloads");
+            btnDownloads = CreateNavButton("Downloads", IconChar.ClockRotateLeft);
             btnDownloads.Width = buttonWidth;
             btnDownloads.Height = 40;
             btnDownloads.Location = new Point(650, 15);
             btnDownloads.Click += BtnDownloads_Click;
             navigationBar.Controls.Add(btnDownloads);
 
-            btnSettings = CreateNavButton("Settings");
+            btnSettings = CreateNavButton("Settings", IconChar.Gears);
             btnSettings.Width = buttonWidth;
             btnSettings.Height = 40;
             btnSettings.Location = new Point(850, 15);
@@ -63,16 +65,23 @@
         /// <summary>
         /// Factory method to create a styled navigation button.
         /// </summary>
-        private Button CreateNavButton(string text) => new()
+        private IconButton CreateNavButton(string text, IconChar icon)
         {
-            Text = text,
-            Width = 150,
-            Height = 40,
-            FlatStyle = FlatStyle.Flat,
-            Font = new Font("Segoe UI", 11, FontStyle.Bold),
-            ForeColor = Color.White,
-            BackColor = Color.FromArgb(25, 35, 55)
-        };
+            return new IconButton
+            {
+                Text = text,
+                IconChar = icon,
+                IconColor = Color.White,
+                IconSize = 20,
+                TextImageRelation = TextImageRelation.ImageBeforeText,
+                Width = 170,
+                Height = 45,
+                FlatStyle = FlatStyle.Flat,
+                Font = new Font("Segoe UI", 11, FontStyle.Bold),
+                ForeColor = Color.White,
+                BackColor = Color.FromArgb(25, 35, 55)
+            };
+        }
 
         /// <summary>
         /// Handles click on the Downloads navigation button: shows history panel and hides queue panels.
