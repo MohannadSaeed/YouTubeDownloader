@@ -114,6 +114,9 @@ namespace YouTubeDownloader.Forms
         public MainForm()
         {
             InitializeComponent();
+
+            this.Icon = new System.Drawing.Icon(Path.Combine(Application.StartupPath, "Assets", "app-icon.ico"));
+
             //db.Database.EnsureCreated(); // Create database if not exists
             appSettings = settingsService.GetSettings();
             ConfigureForm();
